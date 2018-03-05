@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    div
+        nav.pre-scrollable
+            each val in items
+                ul
+                    li
+                        a(href='/items/' + val._id)=val.title
