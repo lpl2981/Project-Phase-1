@@ -71,20 +71,19 @@ module.exports.moviesUpdateOne = function(req, res) {
                     return;
                 }
                 if (watchlist.movies && watchlist.movies.length > 0) {
-                    thisWatchlist = watchlist.movies.id(req.params.moviesid);
+                    thisMovie = watchlist.movies.id(req.params.moviesId);
                     if (!thisMovie) {
                         sendJSONresponse(res, 404, {
-                            "message": "movieid not found"
+                            "message": "movieId not found"
                         });
                     } else {
-                        thisMovie.username = req.body.username;
-                        thisMovie.price = req.body.price;
-                        thisMovie.createdOn = req.body.createdOn;
+                        thisMovie.name = req.body.name;
+                        thisMovie.description = req.body.description;
                         watchlist.save(function(err, watchlist) {
                             if (err) {
                                 sendJSONresponse(res, 404, err);
                             } else {
-                                sendJSONresponse(res, 200, thisMovie);
+                                sendJSONresponse(res, 200, watchlist, thisMovie);
                             }
                         });
                     }
