@@ -27,7 +27,7 @@ var renderHomepage = function(req, res, responseBody){
     title: 'Watchlists',
     pageHeader: {
       title: 'Movies',
-      strapline: 'Find watchlists to review'
+      strapline: 'Find watchlists to view'
     }
   });
 };

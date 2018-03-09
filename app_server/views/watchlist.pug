@@ -3,7 +3,7 @@ extends layout
 block content
     div
         nav.pre-scrollable
-            each val in items
+            each val in watchlist
                 ul
                     li
-                        a(href='/items/' + val._id)=val.title
+                        a(href='/watchlist/' + val._id)=val.title

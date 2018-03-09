@@ -9,8 +9,8 @@ const _renderList = function(req, res, responseBody){
     res.render('watchlist', { title: 'Watchlist', watchlist: responseBody });
 };
 
-const noteslist = function(req, res){
-    const path = '/api/notes';
+const movieslist = function(req, res){
+    const path = '/api/movies';
     const requestOptions = {
         url : apiOptions.server + path,
         method : 'GET',
@@ -24,4 +24,4 @@ const noteslist = function(req, res){
     );
 };
 
-module.exports.noteslist = noteslist;
+module.exports.movieslist = movieslist;
