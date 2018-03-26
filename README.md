@@ -1,7 +1,7 @@
 # CIS385_Assignment5
-CIS385_Assignment5
+CIS385_Project Phase 1
 
-Create an Angular project using the provided REST API.
+Create a project with phase 1 of the assignment
 
 Run these commands to create a sample MongoDb collection
 ```javascript
